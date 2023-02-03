@@ -18,7 +18,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async signIn({ account }) {
       const hasCalendarPermission = account?.scope?.includes(
-        'https://www.googleapis.com/auth/calendar'
+        'https://www.googleapis.com/auth/calendar',
       )
 
       if (!hasCalendarPermission) {
